@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chezmoi-hooks"
+version = "0.1.0"
+description = "Conservative chezmoi source-state protection hooks"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+chezmoi-preserve-templates = "hooks.preserve_templates:main"
+chezmoi-preserve-lines = "hooks.preserve_lines:main"
+chezmoi-enforce-portability = "hooks.enforce_portability:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pyright]
+include = ["hooks", "tests"]
+
+[tool.setuptools.packages.find]
+include = ["hooks*"]

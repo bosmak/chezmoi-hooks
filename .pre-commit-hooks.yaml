@@ -1,0 +1,18 @@
+- id: chezmoi-preserve-templates
+  name: Preserve chezmoi template source lines
+  entry: chezmoi-preserve-templates
+  language: python
+  pass_filenames: false
+  description: Restore exact rendered substitutions back to prior templated source lines from the staged repository snapshot.
+- id: chezmoi-preserve-lines
+  name: Preserve selected volatile source lines
+  entry: chezmoi-preserve-lines
+  language: python
+  pass_filenames: false
+  description: Restore selected volatile source lines from HEAD in the working tree without mutating the index.
+- id: chezmoi-enforce-portability
+  name: Detect rendered literals with known chezmoi expressions
+  entry: chezmoi-enforce-portability
+  language: python
+  pass_filenames: false
+  description: Block added staged literals that already have a direct chezmoi expression elsewhere in the staged snapshot.
