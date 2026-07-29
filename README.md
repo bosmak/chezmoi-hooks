@@ -62,7 +62,7 @@ repos:
     hooks:
       - id: chezmoi-preserve-templates
   - repo: https://github.com/betterleaks/betterleaks
-    rev: vX.Y.Z
+    rev: v1.7.1
     hooks:
       - id: betterleaks
 ```
